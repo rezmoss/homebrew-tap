@@ -5,27 +5,27 @@
 class IpWatch < Formula
   desc "Keep cloud-provider IP ranges applied to your webserver/firewall"
   homepage "https://github.com/rezmoss/ip-watch"
-  version "0.0.3"
+  version "0.0.4"
   license "MIT"
   depends_on :linux
 
   if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-    url "https://github.com/rezmoss/ip-watch/releases/download/v0.0.3/ip-watch_0.0.3_linux_x86_64.tar.gz"
-    sha256 "9e439d18371f5c1e0a7a1b32a3fe259f2f26adc8a293f43793714aad2abfe865"
+    url "https://github.com/rezmoss/ip-watch/releases/download/v0.0.4/ip-watch_0.0.4_linux_x86_64.tar.gz"
+    sha256 "70707fe02ea2ab34f9724a8c9cca1642a8ebae6f33e2505326bfdc35dc6ceb1b"
     define_method(:install) do
       bin.install "ip-watch"
     end
   end
   if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/rezmoss/ip-watch/releases/download/v0.0.3/ip-watch_0.0.3_linux_armv6.tar.gz"
-    sha256 "b80a86b8832bee2217bd956f512168d2d1b2c55922bef535948e38c9805440ec"
+    url "https://github.com/rezmoss/ip-watch/releases/download/v0.0.4/ip-watch_0.0.4_linux_armv6.tar.gz"
+    sha256 "f75aaba3b8c27fc1f6a78e59b76294c5aee007b51069169769e207516c731b71"
     define_method(:install) do
       bin.install "ip-watch"
     end
   end
   if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/rezmoss/ip-watch/releases/download/v0.0.3/ip-watch_0.0.3_linux_arm64.tar.gz"
-    sha256 "ae75669c6b446585269a626ba97749a371905b639a2ef4d2d2ff30d4059db578"
+    url "https://github.com/rezmoss/ip-watch/releases/download/v0.0.4/ip-watch_0.0.4_linux_arm64.tar.gz"
+    sha256 "fc1bbb8277555ecc91b2aa9d3f185aba8b55c682f23008884c039334b0802c12"
     define_method(:install) do
       bin.install "ip-watch"
     end
